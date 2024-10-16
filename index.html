@@ -65,11 +65,11 @@
       <!-- Navbar Search -->
       
       <li class="nav-item">
-        <a class="nav-link" role="button" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <a class="nav-link" role="button" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
     
           <i class="fas fa-sign-out-alt"></i>
         </a>
-        <form id="logout-form" action="{{route('logout')}}" method="POST" style="display:none">
+        <form id="logout-form" action="#" method="POST" style="display:none">
                             @csrf
                             </form>
       </li>
@@ -138,22 +138,8 @@
         <a class="nav-link" data-toggle="dropdown" href="#" role="button">
           <div class="position-relative d-inline-block">
           <i class="fas fa-bell"></i>
-          @if(isset($totalNotifications))
-          <span class="position-absolute top-0 start-100 badge badge-danger navbar-badge" style="font-size: 0.5rem; ">{{$totalNotifications}}</span>
-          @endif
-          </div>
+        </div>
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <span class="dropdown-item dropdown-header">{{$totalNotifications}} Notifications</span>
-        @if(isset($notifications))
-          @foreach($notifications as $notification)
-          
-          <div class="dropdown-divider"></div>
-          <a  class="dropdown-item" data-id='{{$notification->id}}' id="notificationBtn" type="button">
-            <i class="fas fa-envelope mr-2"></i> {{$notification->title}}
-          </a>
-          @endforeach
-          @endif
       </li>
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -176,7 +162,7 @@
             <div class="modal-body">
                 <!-- Profile form goes here -->
                 <form id="changePasswordForm">
-                    @csrf
+                   
                     <div class="mb-3">
                         <label for="senderEmail" class="form-label text-muted">Sender Email</label>
                         <input type="email" class="form-control" id="senderEmail" name="senderEmail">
@@ -234,7 +220,7 @@
                 <ul class="nav nav-treeview" >
                   <li class="nav-item">
                    
-                    <a href="{{route('users')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     &nbsp
                     &nbsp
                     &nbsp
@@ -257,7 +243,7 @@
                 <ul class="nav nav-treeview" >
                   <li class="nav-item">
                    
-                    <a href="{{route('customers')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     &nbsp
                     &nbsp
                     &nbsp
@@ -274,14 +260,14 @@
 
               
               <li class="nav-item">
-                <a href="{{route('brands')}}" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fas fa-angle-right fa-10x nav-icon" style="color:white; font-size:14px;"></i>
                   <p style="color:white;">Brands <i class="right fas fa-angle-left" style="color:white; font-size:14px;"></i></p>
                 </a>
                 <ul class="nav nav-treeview" >
                   <li class="nav-item">
                    
-                    <a href="{{route('brands')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     &nbsp
                     &nbsp
                     &nbsp
@@ -296,14 +282,14 @@
 
               </li>
               <li class="nav-item">
-                <a href="{{route('products')}}" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fas fa-angle-right fa-10x nav-icon" style="color:white; font-size:14px;"></i>
                   <p style="color:white;">Products<i class="right fas fa-angle-left" style="color:white; font-size:14px;"></i></p>
                 </a>
                 <ul class="nav nav-treeview" >
                   <li class="nav-item">
                    
-                    <a href="{{route('products')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     &nbsp
                     &nbsp
                     &nbsp
@@ -318,14 +304,14 @@
 
               </li>
               <li class="nav-item">
-                <a href="{{route('orders')}}" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fas fa-angle-right fa-10x nav-icon" style="color:white; font-size:14px;"></i>
                   <p style="color:white;">Orders<i class="right fas fa-angle-left" style="color:white; font-size:14px;"></i></p>
                 </a>
                 <ul class="nav nav-treeview" >
                   <li class="nav-item">
                    
-                    <a href="{{route('orders')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     &nbsp
                     &nbsp
                     &nbsp
@@ -340,14 +326,14 @@
 
               </li>
               <li class="nav-item">
-                <a href="{{route('requisition.datatable')}}" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fas fa-angle-right fa-10x nav-icon" style="color:white; font-size:14px;"></i>
                   <p style="color:white;">Requisition Forms<i class="right fas fa-angle-left" style="color:white; font-size:14px;"></i></p>
                 </a>
                 <ul class="nav nav-treeview" >
                   <li class="nav-item">
                    
-                    <a href="{{route('requisition.datatable')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     &nbsp
                     &nbsp
                     &nbsp
